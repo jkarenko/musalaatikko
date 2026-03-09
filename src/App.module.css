@@ -1,0 +1,25 @@
+.app {
+  display: grid;
+  grid-template-rows: var(--topbar-height) 1fr;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-areas:
+    "topbar topbar"
+    "sidebar main";
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.topbar {
+  grid-area: topbar;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+  overflow: hidden;
+  position: relative;
+}

@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+}
+
+.btn {
+  width: var(--tap-target);
+  height: var(--tap-target);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  transition: background 0.1s;
+}
+
+.playBtn {
+  background: var(--color-play);
+  color: #000;
+}
+
+.playBtn:active {
+  background: #3da84e;
+}
+
+.stopBtn {
+  background: var(--color-stop);
+  color: #fff;
+}
+
+.stopBtn:active {
+  background: #cc5555;
+}
+
+.stepIndicator {
+  display: flex;
+  gap: 2px;
+}
+
+.step {
+  width: 6px;
+  height: 16px;
+  background: var(--bg-surface);
+  border-radius: 1px;
+  transition: background 0.05s;
+}
+
+.beatStep {
+  background: var(--bg-elevated);
+}
+
+.activeStep {
+  background: var(--color-active);
+}

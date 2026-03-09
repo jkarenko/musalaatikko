@@ -1,0 +1,58 @@
+.container {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gap-sm);
+}
+
+.grid {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hex {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.1s, transform 0.05s;
+  touch-action: none;
+  z-index: 1;
+}
+
+.hex:active {
+  filter: brightness(1.3);
+  transform: scale(0.95);
+  z-index: 2;
+}
+
+.inScale {
+  opacity: 1;
+}
+
+.outScale {
+  opacity: 0.25;
+}
+
+.root {
+  z-index: 2;
+}
+
+.hexLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hexOctave {
+  font-size: 9px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}

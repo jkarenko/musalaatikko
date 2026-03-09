@@ -1,0 +1,51 @@
+:root {
+  /* Background layers */
+  --bg-primary: #0d0d1a;
+  --bg-secondary: #151528;
+  --bg-surface: #1c1c35;
+  --bg-elevated: #252545;
+
+  /* Text */
+  --text-primary: #e8e8f0;
+  --text-secondary: #9090a8;
+  --text-muted: #606078;
+
+  /* Accent colors per section */
+  --color-sampler: #ff6b9d;
+  --color-sampler-dim: #ff6b9d33;
+  --color-drums: #ffa94d;
+  --color-drums-dim: #ffa94d33;
+  --color-melody: #69db7c;
+  --color-melody-dim: #69db7c33;
+  --color-song: #74c0fc;
+  --color-song-dim: #74c0fc33;
+
+  /* Transport */
+  --color-play: #51cf66;
+  --color-stop: #ff6b6b;
+  --color-record: #ff4444;
+  --color-metronome: #da77f2;
+
+  /* UI */
+  --color-active: #7c6ef0;
+  --color-border: #2a2a4a;
+  --color-hover: #ffffff12;
+
+  /* Waveform */
+  --color-waveform: #74c0fc;
+  --color-waveform-bg: #74c0fc18;
+
+  /* Sizing */
+  --topbar-height: 56px;
+  --sidebar-width: 220px;
+  --tap-target: 44px;
+  --border-radius: 8px;
+  --border-radius-sm: 4px;
+
+  /* Spacing */
+  --gap-xs: 4px;
+  --gap-sm: 8px;
+  --gap-md: 12px;
+  --gap-lg: 16px;
+  --gap-xl: 24px;
+}

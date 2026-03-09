@@ -1,0 +1,169 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--gap-lg);
+  gap: var(--gap-lg);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-sampler);
+}
+
+.recordBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  padding: var(--gap-sm) var(--gap-lg);
+  min-height: var(--tap-target);
+  background: var(--bg-surface);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all 0.15s;
+}
+
+.recordBtn:active {
+  background: var(--bg-elevated);
+}
+
+.recording {
+  background: var(--color-record);
+  color: #fff;
+}
+
+.recordDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-record);
+}
+
+.recording .recordDot {
+  background: #fff;
+  animation: pulse 0.8s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.recordingIndicator {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  padding: var(--gap-md);
+  background: var(--color-record);
+  color: #fff;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.recordingPulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: pulse 0.8s infinite;
+}
+
+.sampleList {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.empty {
+  text-align: center;
+  padding: var(--gap-xl);
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.sampleItem {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  padding: var(--gap-sm) var(--gap-md);
+  background: var(--bg-surface);
+  border-radius: var(--border-radius);
+  min-height: var(--tap-target);
+}
+
+.playBtn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-sampler-dim);
+  color: var(--color-sampler);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.playBtn:active {
+  background: var(--color-sampler);
+  color: #fff;
+}
+
+.sampleInfo {
+  flex: 1;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sampleName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.renameInput {
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--bg-elevated);
+  border: 1px solid var(--color-active);
+  border-radius: var(--border-radius-sm);
+  padding: 2px 6px;
+  outline: none;
+  width: 100%;
+}
+
+.duration {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.deleteBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  border-radius: var(--border-radius-sm);
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.deleteBtn:active {
+  color: var(--color-stop);
+  background: var(--color-hover);
+}

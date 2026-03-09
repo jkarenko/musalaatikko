@@ -1,0 +1,216 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--gap-md);
+  gap: var(--gap-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-lg);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-song);
+  flex: 1;
+}
+
+.controls {
+  display: flex;
+  gap: var(--gap-sm);
+}
+
+.drawerBtn {
+  min-height: var(--tap-target);
+  padding: 0 var(--gap-md);
+  background: var(--bg-surface);
+  border-radius: var(--border-radius);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.drawerBtn:active {
+  background: var(--bg-elevated);
+}
+
+.drawerActive {
+  background: var(--color-song-dim);
+  color: var(--color-song);
+}
+
+.playBtn {
+  min-height: var(--tap-target);
+  padding: 0 var(--gap-lg);
+  background: var(--color-play);
+  color: #000;
+  border-radius: var(--border-radius);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.playing {
+  background: var(--color-stop);
+  color: #fff;
+}
+
+.timeline {
+  flex: 1;
+  overflow: auto;
+  background: var(--bg-primary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  position: relative;
+}
+
+.ruler {
+  height: 28px;
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.rulerMark {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-left: 1px solid var(--color-border);
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2px;
+  padding-left: 4px;
+}
+
+.barMark {
+  border-left: 2px solid var(--bg-elevated);
+}
+
+.barNum {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.tracks {
+  position: relative;
+  min-height: 100%;
+}
+
+.track {
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 239px,
+    var(--color-border) 239px,
+    var(--color-border) 240px
+  );
+}
+
+.timelineItem {
+  position: absolute;
+  top: 4px;
+  height: calc(100% - 8px);
+  background: var(--bg-surface);
+  border-left: 3px solid;
+  border-radius: var(--border-radius-sm);
+  padding: 4px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+  cursor: grab;
+  min-width: 40px;
+}
+
+.timelineItem:active {
+  cursor: grabbing;
+  opacity: 0.8;
+}
+
+.itemLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.removeBtn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: var(--text-muted);
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  opacity: 0.7;
+}
+
+.removeBtn:active {
+  color: var(--color-stop);
+  background: var(--color-hover);
+}
+
+.dragGhost {
+  position: fixed;
+  pointer-events: none;
+  padding: var(--gap-sm) var(--gap-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--color-active);
+  border-radius: var(--border-radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  z-index: 100;
+  opacity: 0.9;
+}
+
+.drawerList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+
+.drawerItem {
+  padding: var(--gap-sm) var(--gap-md);
+  min-height: var(--tap-target);
+  background: var(--bg-surface);
+  border-left: 3px solid;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: grab;
+  touch-action: none;
+}
+
+.drawerItem:active {
+  background: var(--bg-elevated);
+  cursor: grabbing;
+}
+
+.drawerItemType {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
