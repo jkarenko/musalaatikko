@@ -214,3 +214,21 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
+
+.drawerEmpty {
+  padding: var(--gap-lg);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.snapIndicator {
+  position: absolute;
+  top: 2px;
+  height: calc(100% - 4px);
+  background: var(--color-active);
+  opacity: 0.15;
+  border-radius: var(--border-radius-sm);
+  border: 2px dashed var(--color-active);
+  pointer-events: none;
+}
